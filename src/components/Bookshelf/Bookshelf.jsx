@@ -11,14 +11,12 @@ const Bookshelf = () => {
   });
 
   const handleInputChange = (e) => {
-//   set the newBook state to {title: 'e.target.value', author: 'e.terget.value'}
-  setNewBook({...newBook, [e.target.name]: e.target.value}
-  );
-};
+    //   set the newBook state to {title: 'e.target.value', author: 'e.terget.value'}
+    setNewBook({ ...newBook, [e.target.name]: e.target.value });
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
-    setBooks([...books, newBook])
-    
+    setBooks([...books, newBook]);
   };
 
   return (
@@ -46,8 +44,8 @@ const Bookshelf = () => {
         {books.map((book) => {
           return (
             <div className="bookCardsDiv">
-              <span>{book.title} </span>
-              <span>by {book.author} </span>
+              <h3>{book.title}</h3>
+              <p>by {book.author} </p>
             </div>
           );
         })}
@@ -56,4 +54,4 @@ const Bookshelf = () => {
   );
 };
 
-export default Bookshelf
+export default Bookshelf;
