@@ -12,11 +12,8 @@ const Bookshelf = () => {
 
   const handleInputChange = (e) => {
 //   set the newBook state to {title: 'e.target.value', author: 'e.terget.value'}
-  setNewBook(newBook => ({
-    ...newBook,
-    // []-> denotes a key 
-    [e.target.name]: e.target.value 
-  }));
+  setNewBook({...newBook, [e.target.name]: e.target.value}
+  );
 };
   const handleSubmit = (e) => {
     e.preventDefault();
